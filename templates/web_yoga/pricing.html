@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- our pricing -->
+            <div id="pricing" class="pricing">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title">
+                                <h2>Our<strong class="black"> Pricing</strong></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for prod in pr %}
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="pricing_box">
+                                <h3>{{ prod.name }}</h3>
+                                <span>$<strong class="white_bold">{{ prod.price}}</strong></span>
+                                <p>{{ prod.description }}</p>
+                                <a class="SelectPlan" href="#">Select Plan</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+<!--                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">-->
+<!--                            <div class="pricing_box_cross">-->
+<!--                                <h3>Standard</h3>-->
+<!--                                <span>$<strong class="white_bold">50</strong></span>-->
+<!--                                <p>It is a long established fact that a reader will be distracted by the readable</p>-->
+<!--                                <a class="SelectPlan" href="#">Select Plan</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">-->
+<!--                            <div class="pricing_box">-->
+<!--                                <h3>Premium</h3>-->
+<!--                                <span>$<strong class="white_bold">60</strong></span>-->
+<!--                                <p>It is a long established fact that a reader will be distracted by the readable</p>-->
+<!--                                <a class="SelectPlan" href="#">Select Plan</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+
+            </div>
+            <!-- end our pricing -->
+
+{% endblock %}

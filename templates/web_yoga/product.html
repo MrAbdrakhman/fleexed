@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+            <!-- We Do Yogas -->
+            <div id="yoga" class="weyoga">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title">
+                                <h2>How to <strong class="black"> We Do Yogas</strong></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                            <div class="yogo_three_box">
+                                <figure><img src="{% static 'images/1.png' %}" alt="#" /></figure>
+                                <h3>Ashtanga Yoga</h3>
+                                <p>simply dummy text of the printing and typesetting industry. Lorem </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="yogo_three_box">
+                                <figure><img src="{% static 'images/2.png' %}" alt="#" /></figure>
+                                <h3>Hatha Yoga</h3>
+                                <p>simply dummy text of the printing
+                                    <br>and typesetting industry. Lorem </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                            <div class="yogo_three_box">
+                                <figure><img src="{% static 'images/3.png' %}" alt="#" /></figure>
+                                <h3>Kundalini Yoga</h3>
+                                <p>simply dummy text of the printing
+                                    <br>and typesetting industry. Lorem </p>
+                            </div>
+                        </div>
+                        <a class="readmore" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end We Do Yogas -->
+
+
+{% endblock %}
