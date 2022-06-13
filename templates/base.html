@@ -63,9 +63,9 @@
                                     <a href="#"> <img src="{% static 'images/phone_icon.png' %}" /> Contact : +71 71234567</a>
                                     <br>
                                     {% if request.user.is_authenticated %}
-                                    Welcome {{user.username }} <a href = "{% url 'logout' %}"> Logout</a>
+                                    <a href="#"> Welcome {{user.username }} <a href = "{% url 'logout' %}"> Logout</a>
                                     {% else %}
-                                    <a class="nav-link" href="{% url 'login' %}">Login/Registration</a>
+                                    <a href="{% url 'login' %}">Login   </a> <a href = "{% url 'register' %}">   Registration</a>
                                     {% endif %}
                                 </div>
                             </div>
@@ -86,7 +86,6 @@
                                     <li class="nav-item active">
                                         <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                                     </li>
-
                                     <li class="nav-item">
                                         <a class="nav-link" href= "{% url 'about' %}" >About </a>
                                     </li>
@@ -99,10 +98,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{% url 'yoga_online' %}">Online</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'register' %}">Registration</a>
-                                    </li>
-                                    <li class="nav-item">
+                                   <li class="nav-item">
                                         <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
                                     </li>
 

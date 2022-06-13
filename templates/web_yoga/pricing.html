@@ -23,11 +23,14 @@
                     <div class="row">
                         {% for prod in pr %}
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                            <div class="pricing_box">
+                            <div class="pricing_box_cross">
                                 <h3>{{ prod.name }}</h3>
                                 <span>$<strong class="white_bold">{{ prod.price}}</strong></span>
                                 <p>{{ prod.description }}</p>
                                 <a class="SelectPlan" href="#">Select Plan</a>
+                                <br>
+                                <br>
+                                <br>
                             </div>
                         </div>
                         {% endfor %}
