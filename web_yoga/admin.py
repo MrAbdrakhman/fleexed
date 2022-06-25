@@ -4,5 +4,12 @@ from .models import Product, Price
 
 
 admin.site.register(Product)
-admin.site.register(Price)
+
 # Register your models here.
+
+
+class PriceAdmin(admin.ModelAdmin):
+    list_display = ("name", "description", "price")
+
+
+admin.site.register(Price, PriceAdmin)

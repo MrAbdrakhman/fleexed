@@ -22,4 +22,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('web_yoga.urls'))
+    path('search/', SearchResultsView.as_view(), name='search_results'),
+    path('', HomePageView.as_view(), name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
