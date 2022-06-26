@@ -9,7 +9,7 @@ admin.site.register(Product)
 
 
 class PriceAdmin(admin.ModelAdmin):
-    list_display = ("name", "description", "price")
+    list_display = ("name", "description", "price",)
 
 
 admin.site.register(Price, PriceAdmin)

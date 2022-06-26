@@ -3,6 +3,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import UserLoginForm
 from django.contrib.auth import login, logout
+from django.db.models import Q # новый
+from django.views.generic import TemplateView, ListView
+
 
 # Create your views here.
 from .models import Product, Price
@@ -64,3 +67,19 @@ def contact(request):
 def logout_user(request):
     logout(request)
     return redirect('/')
+
+class HomePageView(TemplateView):
+    template_name = 'search_results.html'
+
+class SearchResultsView(ListView):
+    model = Price
+    template_name = 'search_results.html'
+    def get_queryset(self): # новый
+        query = self.request.GET.get('q')
+        object_list = Price.objects.filter(
+            Q(name__icontains=query) | Q(price__icontains=query)
+        )
+        return object_list
+
+
+

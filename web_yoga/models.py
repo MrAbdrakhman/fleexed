@@ -49,6 +49,8 @@ class Price(models.Model):
         blank=True
     )
 
+    class Meta:
+        verbose_name_plural = "prices"
     def __str__(self):
         return self.name
 

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!--            <div class="Newsletter">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-12">-->
+<!--                            <div class="news">-->
+<!--                                <h2>Searching by price</h2>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-12">-->
+<!--                            <form class="new_botton">-->
+<!--                                <input class="tetter" placeholder="Your email" type="text" name="Your email">-->
+
+<!--                                <button class="submit">Subscribe</button>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <form action="{% url 'search_results' %}" method="get">
+                <input name="q" type="text" placeholder="Search...">
+            </form>
+
+            <h1>Search Results</h1>
+
+            <ul>
+              {% for price in object_list %}
+                <li>
+                  {{ price.name }}
+                </li>
+              {% endfor %}
+            </ul>
+
+
+
+
+
+{% endblock %}

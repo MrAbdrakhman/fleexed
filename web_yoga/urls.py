@@ -1,5 +1,6 @@
 from django.urls import  path
 from .views import index, about, product, pricing, yoga_online, contact, login_user, register_user, logout_user
+from .views import HomePageView, SearchResultsView
 
 urlpatterns = [
 path('', index, name='index'),
@@ -11,6 +12,7 @@ path('', index, name='index'),
     path('login/', login_user, name='login'),
     path('register/', register_user, name='register'),
     path('logout/', logout_user, name='logout'),
+    path('search/', SearchResultsView.as_view(), name='search_results'),
+    path('search/', HomePageView.as_view(), name='search_results'),
 
-    #path('create_product/', create_product, name='create_product')
 ]

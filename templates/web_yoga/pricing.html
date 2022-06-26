@@ -34,49 +34,46 @@
                             </div>
                         </div>
                         {% endfor %}
-<!--                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">-->
-<!--                            <div class="pricing_box_cross">-->
-<!--                                <h3>Standard</h3>-->
-<!--                                <span>$<strong class="white_bold">50</strong></span>-->
-<!--                                <p>It is a long established fact that a reader will be distracted by the readable</p>-->
-<!--                                <a class="SelectPlan" href="#">Select Plan</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">-->
-<!--                            <div class="pricing_box">-->
-<!--                                <h3>Premium</h3>-->
-<!--                                <span>$<strong class="white_bold">60</strong></span>-->
-<!--                                <p>It is a long established fact that a reader will be distracted by the readable</p>-->
-<!--                                <a class="SelectPlan" href="#">Select Plan</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="pricing_box_cross">
+                                <h3>Standard</h3>
+                                <span>$<strong class="white_bold">50</strong></span>
+                                <p>It is a long established fact that a reader will be distracted by the readable</p>
+                                <a class="SelectPlan" href="#">Select Plan</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="pricing_box">
+                                <h3>Premium</h3>
+                                <span>$<strong class="white_bold">60</strong></span>
+                                <p>It is a long established fact that a reader will be distracted by the readable</p>
+                                <a class="SelectPlan" href="#">Select Plan</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
             <!-- end our pricing -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--<br>-->
+<!--            <form action="{% url 'search_results' %}" method="get">-->
+<!--                <input name="q" type="text" placeholder="Search...">-->
+<!--            </form>-->
 
-            <div class="Newsletter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="news">
-                                <h2>Searching by price</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <form class="new_botton">
-                                <input class="tetter" placeholder="Your email" type="text" name="Your email">
+<!--            <h1>Search Results</h1>-->
 
-                                <button class="submit">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--            <ul>-->
+<!--              {% for price in object_list %}-->
+<!--                <li>-->
+<!--                  {{ price.name }}, {{ price.description }}-->
+<!--                </li>-->
+<!--              {% endfor %}-->
+<!--            </ul>-->
 
-            <!-- end Newsletter -->
 
 {% endblock %}
