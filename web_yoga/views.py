@@ -71,14 +71,20 @@ def logout_user(request):
 class HomePageView(TemplateView):
     template_name = 'search_results.html'
 
+
 class SearchResultsView(ListView):
     model = Price
     template_name = 'search_results.html'
+
     def get_queryset(self): # новый
         query = self.request.GET.get('q')
+        print(query)
         object_list = Price.objects.filter(
             Q(name__icontains=query) | Q(price__icontains=query)
         )
+        print(object_list)
+        if not object_list:
+            print('YES')
         return object_list
 
 
